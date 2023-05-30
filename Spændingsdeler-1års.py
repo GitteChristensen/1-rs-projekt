@@ -1,7 +1,7 @@
 from machine import Pin, ADC
 from time import sleep
 
-bat = ADC(Pin(36))
+bat = ADC(Pin(34))
 bat.atten(ADC.ATTN_11DB)
 bat.width(ADC.WIDTH_12BIT)
 
