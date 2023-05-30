@@ -1,12 +1,16 @@
-from machine import Pin
+import machine
 import time
 
-led = Pin(17, Pin.OUT)
+# Set up GPIO pin for the LED
+led_pin = machine.Pin(17, machine.Pin.OUT)
 
 while True:
-   led.value(1)
-   print("LED IS ON")
-   time.sleep(5)
-   led.value(0)
-   print("LED IS OFF")
-   time.sleep(10)
+    # Turn on the LED
+    led_pin.on()
+    print("LED IS ON")
+    time.sleep(5)
+
+    # Turn off the LED
+    led_pin.off()
+    print("LED IS OFF")
+    time.sleep(10)
